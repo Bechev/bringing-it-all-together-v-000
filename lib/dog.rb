@@ -70,7 +70,7 @@ class Dog
     dog_object
   end
 
-  def new_from_db
+  def self.new_from_db
   end
   # def update
   #   sql =  "UPDATE dogs SET name = ?, breed = ? where id =?"
