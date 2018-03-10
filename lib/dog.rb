@@ -48,12 +48,12 @@ class Dog
       WHERE id = ?
       LIMIT 1
     SQL
-    dog = DB[:conn].execute(sql, id)
-    dog.map do|row|
-      test = Dog.new(id: row[0], name: row[1], breed: row[2])
-      binding.pry
-    end.first
-    #binding.pry
+    dog_table = DB[:conn].execute(sql, id)
+    dog_table.map do|row|
+      dog_object = Dog.new(id: row[0], name: row[1], breed: row[2])
+    end
+
+    dog_object
 
   end
 
