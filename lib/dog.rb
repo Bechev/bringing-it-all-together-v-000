@@ -50,7 +50,7 @@ class Dog
     SQL
     dog = DB[:conn].execute(sql, id)
     dog.map do|row|
-      Dog.new(id: row[0], name: row[1], breed: row[2])
+      test = Dog.new(id: row[0], name: row[1], breed: row[2])
       binding.pry
     end.first
     #binding.pry
