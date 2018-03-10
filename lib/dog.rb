@@ -42,14 +42,14 @@ class Dog
     dog.save
   end
 
-  def find_by_id
+  def self.find_by_id
     sql = <<-SQL
       SELECT * FROM dogs
       WHERE id = ?
       LIMIT 1
     SQL
-    binding.pry
     test = DB[:conn].execute(sql)
+    binding.pry
 
   end
 
