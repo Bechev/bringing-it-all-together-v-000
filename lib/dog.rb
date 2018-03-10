@@ -49,9 +49,10 @@ class Dog
       LIMIT 1
     SQL
     dog_table = DB[:conn].execute(sql, id)
-    dog_table.map do|row|
-      dog_object = Dog.new(id: row[0], name: row[1], breed: row[2])
-    end
+
+    dog_table.map do |row|
+      Dog.new(id: row[0], name: row[1], breed: row[2])
+    end.first
 
     dog_object
 
