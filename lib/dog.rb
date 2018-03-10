@@ -64,6 +64,7 @@ class Dog
     if !dog.empty?
       dog_object = Dog.new(dog[0][0], dog[0][1],dog [0][2])
     else
+      binding.pry
       dog_object = Dog.create(hash)
     end
     dog_object
