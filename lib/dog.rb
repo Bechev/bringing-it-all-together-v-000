@@ -36,7 +36,7 @@ class Dog
     self
   end
 
-  def self.create(hash{})
+  def self.create
 
     self.save
   end
