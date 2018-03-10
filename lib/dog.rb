@@ -44,8 +44,13 @@ class Dog
 
   def find_by_id
     sql = <<-SQL
-
+      SELECT * FROM dogs
+      WHERE id = ?
+      LIMIT 1
     SQL
+    test = DB[:conn].execute(sql)
+    binding.pry
+    
   end
 
   # def update
