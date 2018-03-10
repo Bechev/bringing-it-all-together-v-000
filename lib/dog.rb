@@ -62,7 +62,7 @@ class Dog
     SQL
     dog = DB[:conn].execute(sql, hash[:name], hash[:breed])
     if !dog = empty?
-
+      dog_object = Dog.new(dog[0][0], dog[0][1],dog [0][2])
   end
 
   # def update
