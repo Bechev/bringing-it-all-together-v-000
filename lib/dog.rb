@@ -48,8 +48,8 @@ class Dog
       WHERE id = ?
       LIMIT 1
     SQL
-    test = DB[:conn].execute(sql)
     binding.pry
+    test = DB[:conn].execute(sql)
 
   end
 
