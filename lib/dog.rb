@@ -62,8 +62,8 @@ class Dog
     SQL
     dog = DB[:conn].execute(sql, hash[:name], hash[:breed])
     if !dog.empty?
-      binding.pry
-      dog_object = Dog.new(id: dog[0][0], name: dog[0][1], breed: dog [0][2])
+      #binding.pry
+      dog_object = Dog.new(id: dog[0][0], name: dog[0][1], breed: dog[0][2])
     else
       dog_object = Dog.create(hash)
     end
