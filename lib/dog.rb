@@ -60,8 +60,9 @@ class Dog
       SELECT * FROM dogs
       WHERE name = ? AND breed = ?
     SQL
-    DB[:conn].execute(sql, hash[:name], hash[:breed])
-    binding.pry
+    dog = DB[:conn].execute(sql, hash[:name], hash[:breed])
+    if !dog = empty
+      
   end
 
   # def update
