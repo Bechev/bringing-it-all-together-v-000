@@ -64,7 +64,9 @@ class Dog
     if !dog = empty?
       dog_object = Dog.new(dog[0][0], dog[0][1],dog [0][2])
     else
-      Dog.create(hash)
+      dog_object = Dog.create(hash)
+    end
+    dog_object
   end
 
   # def update
