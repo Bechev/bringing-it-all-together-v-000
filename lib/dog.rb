@@ -36,7 +36,7 @@ class Dog
     self
   end
 
-  def self.create
+  def self.create(options={})
 
     self.save
   end
