@@ -84,7 +84,8 @@ class Dog
 
   def update
     sql = <<-SQL
-
+      
     SQL
+    DB[:conn].execute(sql, self.name, self.breed)
   end
 end
