@@ -50,7 +50,7 @@ class Dog
     SQL
     test = DB[:conn].execute(sql)
     binding.pry
-    
+
   end
 
   # def update
