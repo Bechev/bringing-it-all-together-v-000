@@ -76,7 +76,7 @@ class Dog
     dog
   end
 
-  def find_by_name(name)
+  def self.find_by_name(name)
     dog_table = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? LIMIT 1", name)
     dog.object = Dog.new(id: dog[0][0], name: dog[0][1], breed: dog[0][2])
 
