@@ -18,7 +18,7 @@ class Dog
       name TEXT,
       breed TEXT)
     SQL
-  #  binding.pry
+
     DB[:conn].execute(sql)
   end
 
